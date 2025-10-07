@@ -6,19 +6,12 @@ I specialize in cleaning and preparing raw data using MySQL to ensure accuracy, 
 
 // Remove Duplicate ... //
 
-select * from  layoff1;
+<img width="220" height="56" alt="image" src="https://github.com/user-attachments/assets/8f5afa78-e50a-43fc-b2ab-15e3d5906355" />
 
-<img width="815" height="240" alt="image" src="https://github.com/user-attachments/assets/d930d404-afc6-4aab-855d-2637210d8ca9" />
 
-with duplicate_cte as (
-select * ,
-row_number() over(partition by company, location, industry, total_laid_off, 
-percentage_laid_off, date, stage, country, funds_raised_millions) as row_num
-from layoff)
-select * from duplicate_cte
-where row_num > 1;
 
-<img width="803" height="231" alt="image" src="https://github.com/user-attachments/assets/87618355-81d3-4550-a8ac-fa750ed77851" />
+
+
 
 
 
