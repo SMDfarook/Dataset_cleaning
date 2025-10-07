@@ -5,6 +5,7 @@ Project Overview :
 This project focuses on cleaning, standardizing, and analyzing a raw dataset of global freelancer profiles to extract meaningful business and market insights. The goal was to transform inconsistent, messy text fields into clean, structured data ready for statistical analysis and visualization.
 
 Key Data Cleaning Decisions :
+
 The primary challenges addressed during the cleaning phase were:
 
 Handling Missing Data: Converted placeholder values (e.g., ’N/A’, blanks) and incorrectly imputed values (e.g., ’0’ in hourly rates) to NULL to preserve data integrity and prevent calculation errors.
@@ -16,6 +17,7 @@ Cleaning Numerical Fields: Removed non-numeric characters (like $\text{'$'}$ and
 Duplicate Removal: Ensured data uniqueness by removing duplicate entries based on the freelancer_ID.
 
 Key Insights & Findings from Freelancers-dataset EDA
+
 The exploratory analysis revealed several important characteristics of the freelancer market:
 
 Rate vs. Experience: A common query pattern explored the relationship between high hourly_rate and years_of_experience, particularly flagging highly-paid beginners (rate>$80, experience<3 years) for further investigation.
@@ -28,7 +30,9 @@ High-Quality Segment (Rating ≥4): Identified the languages and countries that 
 
 Satisfaction Hotspots: Calculation of the percentage of freelancers with client_satisfaction≥4.0 per country highlights regions with strong quality assurance.
 
+
 ⚙️ Core Practice Techniques
+
 The project exercises utilized several intermediate MySQL features to demonstrate robust data manipulation skills:
 
 Technique Purpose Conditional Aggregation Used SUM(CASE WHEN ... THEN 1 ELSE 0 END) to calculate percentages and count subsets (e.g., active males, satisfied clients) within GROUP BY clauses.
